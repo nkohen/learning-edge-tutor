@@ -13,11 +13,13 @@ Run one lesson for the learner. Topic hint, if any: $ARGUMENTS
   `in-progress`. If one exists, offer to **resume** it and skip to step 4 (re-read its map first).
 - `memory/teaching-method.md` and `docs/lesson-prep-pass-design.md`, in full. They are the
   protocol for everything below.
-- `memory/sqisign-prerequisite-chain.md`, the territory.
+- The learner's territory map, named in their profile's § Goal (`territories/<slug>.md`). If the
+  profile names none, or the learner now wants a different goal, build or choose one as in
+  `/setup` step 3 before going on.
 
 ## 1. Choose the target at the edge
 
-From the learner's graded state, never from the chain's order, propose **1–3 candidate targets**
+From the learner's graded state, never from the map's order, propose **1–3 candidate targets**
 whose formal inputs they hold or are one short, motivated detour away. Give one line each on what
 it is and what it would cost them (what is missing on the way). If they named a topic, include it
 and say honestly how far from their edge it is. Let them pick, or propose their own. A target

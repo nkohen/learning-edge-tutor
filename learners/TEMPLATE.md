@@ -9,9 +9,12 @@ Hedged prose, not a score sheet. Every claim says HOW the learner came to hold i
 why) · **absent** (probed, not held; this is data too). Mark anything only *claimed* in the
 interview and not yet observed as **(claimed)**.
 
+## Goal
+- What they want to understand, in their words:
+- Territory map: `territories/<slug>.md`
+
 ## Who they are (durable, cross-topic)
 - Background (field, training, what they do day to day):
-- Goal for using the tutor:
 - How they work: rigor level, what they refuse to accept, how they react to exposition.
 
 ## What they hold

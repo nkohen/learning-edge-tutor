@@ -1,10 +1,14 @@
-# SQIsign prerequisite chain — variant-aware
+# Territory map — SQIsign (variant-aware)
 
-*A map of the territory, not a syllabus and not a learner record. Which node to teach next comes
-from the learner's graded state in `learners/<name>.md`, never from the order here. (Public
-version: learner-specific state from the author's own runs has been removed.)*
+*A territory map: what there is to learn on the way to a goal, and how it depends on what. Not a
+syllabus and not a learner record. Which node to teach next comes from the learner's graded state
+in `learners/<name>.md`, never from the order here. This map ships with the tutor: it was drafted
+from the literature, used in the author's own teaching runs, and gated once (claim-auditor → red-team).*
 
-**Scope** (set by Nadav, 2026-07-30). The variants use materially different mathematics:
+**Goal this map serves:** understanding SQIsign. If a learner's goal is elsewhere, build a new map
+(`/setup` does this). Do not bend this one.
+
+**Scope** (the author's choice, 2026-07-30). The variants use materially different mathematics:
 
 - **Priority: SQIsign2D-West** (Basso–Dartois–De Feo–Leroux–Maino–Pope–Robert–Wesolowski, 2024),
   the basis of the NIST round-2 submission. This is the terminal target.

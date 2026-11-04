@@ -8,6 +8,7 @@ Collects:
   observe/*.jsonl            hook logs (friction, usage, tool outcomes, feedback)
   learners/*.md              the learner profile(s), minus TEMPLATE.md
   lessons/**                 lesson logs, question stacks, prep
+  territories/*.md           territory maps built here (not the shipped ones)
   transcripts/**             Claude Code's transcripts for THIS project directory
                              (from ~/.claude/projects/, incl. subagent transcripts)
 
@@ -19,6 +20,7 @@ import fnmatch
 import json
 import os
 import re
+import subprocess
 import sys
 import zipfile
 from pathlib import Path
@@ -78,6 +80,16 @@ def collect():
     if lessons.is_dir():
         for f in sorted(p for p in lessons.rglob("*") if p.is_file()):
             items.append(("lessons/" + f.relative_to(lessons).as_posix(), f))
+    territories = ROOT / "territories"
+    if territories.is_dir():
+        try:
+            shipped = set(subprocess.run(["git", "-C", str(ROOT), "ls-files", "territories"],
+                                         capture_output=True, text=True, check=True).stdout.split())
+        except (OSError, subprocess.CalledProcessError):
+            shipped = set()
+        for f in sorted(territories.glob("*.md")):
+            if "territories/" + f.name not in shipped:
+                items.append(("territories/" + f.name, f))
     items.extend(transcript_files())
     return items
 

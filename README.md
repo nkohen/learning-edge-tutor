@@ -1,9 +1,12 @@
 # learning-edge
 
-An inquiry-based tutor for the mathematics behind isogeny-based cryptography, aiming at
-SQIsign2D-West. It interviews you to find what you already know, then teaches at the edge of it,
-by having you work examples and discover the results yourself. It runs inside
+An inquiry-based tutor, mainly for mathematics. You tell it what you want to understand. It
+interviews you to find what you already know, then teaches at the edge of it, by having you work
+examples and discover the results yourself. It runs inside
 [Claude Code](https://claude.com/claude-code).
+
+It ships with one ready-made map, toward the isogeny-based signature scheme SQIsign. For any other
+goal it builds the map with you during setup.
 
 **This is an early test release.** Expect rough edges, and please report them.
 
@@ -14,8 +17,9 @@ git clone https://github.com/nkohen/learning-edge-tutor.git && cd learning-edge-
 claude
 ```
 
-Then type `/setup`. Claude checks your install and interviews you, which takes about 15 to
-30 minutes. After that, type `/lesson` whenever you want to learn something.
+Then type `/setup`. Claude checks your install, asks what you want to learn, and interviews you,
+which takes about 15 to 30 minutes, longer if your topic needs a new map. After that, type
+`/lesson` whenever you want to learn something.
 
 ## Sending feedback
 
