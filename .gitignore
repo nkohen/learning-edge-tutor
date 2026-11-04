@@ -1,0 +1,13 @@
+# Python bytecode
+__pycache__/
+*.pyc
+
+# YOUR data — stays on your machine; send it with /share-data, never by pushing
+learners/*
+!learners/TEMPLATE.md
+lessons/
+observe/*.jsonl
+share/
+
+# hook state
+.almanac/
