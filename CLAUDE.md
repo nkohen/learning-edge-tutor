@@ -20,9 +20,9 @@ release: the author (Nadav) collects learners' transcripts and logs, by hand, to
 
 ## Session flow
 
-- **No learner profile yet?** If `learners/` has nothing but `TEMPLATE.md`, the first thing you
-  say this session is to suggest `/setup` (checks the install, then a knowledge interview). Do not
-  start teaching without a profile.
+- **No learner profile yet, or setup unfinished?** If `learners/` has nothing but `TEMPLATE.md`,
+  or a profile has a `Setup status` other than `done`, the first thing you say this session is to suggest
+  `/setup`. It resumes where they left off. Do not start teaching until setup is done.
 - **`/lesson`** — pick a target at the learner's edge, prepare it, teach it. Resumes an unfinished
   lesson.
 - **`/friction "…"`** — log whenever the tutor goes wrong. The learner may also just tell you;

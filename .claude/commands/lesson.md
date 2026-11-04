@@ -7,8 +7,8 @@ Run one lesson for the learner. Topic hint, if any: $ARGUMENTS
 
 ## 0. Load
 
-- The learner: `learners/*.md` other than `TEMPLATE.md`. If there are none, say to run `/setup`
-  and stop. If there are several, ask which one.
+- The learner: `learners/*.md` other than `TEMPLATE.md`. If there are none, or the profile has a
+  `Setup status` other than `done` (no status line counts as done), say to run `/setup` (it resumes) and stop. If there are several, ask which one.
 - `lessons/<name>/stack.md` (their question stack) and any `lessons/<name>/*/log.md` with status
   `in-progress`. If one exists, offer to **resume** it and skip to step 4 (re-read its map first).
 - `memory/teaching-method.md` and `docs/lesson-prep-pass-design.md`, in full. They are the

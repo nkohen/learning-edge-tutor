@@ -9,6 +9,8 @@ Hedged prose, not a score sheet. Every claim says HOW the learner came to hold i
 why) · **absent** (probed, not held; this is data too). Mark anything only *claimed* in the
 interview and not yet observed as **(claimed)**.
 
+**Setup status:** in-progress — next: step 2 (goal + background) · install check: not yet run
+
 ## Goal
 - What they want to understand, in their words:
 - Territory map: `territories/<slug>.md`

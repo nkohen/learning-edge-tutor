@@ -6,6 +6,21 @@ description: First-run setup — check the install, explain where data goes, cho
 Walk the learner through first-time setup. Keep each turn short and hand the ball back. This is
 the learner's first contact with the tutor, so it should feel like the tutor, not a form.
 
+**Save as you go.** A session can end at any moment. From step 2 on, everything the learner tells
+you goes into `learners/<handle>.md` as soon as you learn it, not at the end. Keep its
+`Setup status` line current: `in-progress — next: step <n> (<what's left>)`, and `done` at the end.
+
+## 0. Resume check (before anything else)
+
+Look for `learners/*.md` other than `TEMPLATE.md` whose `Setup status` is not `done`. If there is
+one, greet them by handle, say in one line what is already saved ("I have your goal and your
+background; we were partway through the interview"), and pick up at the recorded step. Don't
+re-ask anything already in the profile. Re-run the install check only if it isn't recorded as
+passed. If the profile names a map in `territories/` that doesn't exist yet, its build was
+interrupted: restart it. If the status is `done`, or the profile has no `Setup status` line at all (an earlier `/setup`
+version wrote profiles only at the end), setup is finished. Offer `/lesson` instead, or
+ask whether they want to change their goal.
+
 ## 1. Install check (do it, then report in a few lines)
 
 Run these checks yourself and fix what you can. Ask the learner only for what needs them.
@@ -25,7 +40,10 @@ Claude Code's own store), and nothing is sent unless they run `/share-data` and 
 
 ## 2. Who they are, and what they want to learn
 
-Ask for a short handle for their profile (lowercase, used as a filename). Then ask what they want
+Ask for a short handle for their profile (lowercase, used as a filename). **Immediately** copy
+`learners/TEMPLATE.md` to `learners/<handle>.md`, with `Setup status: in-progress — next: step 2
+(goal + background)` and `install check passed <date>`. Fill in the goal, background and working
+style as they give them. Then ask what they want
 to understand, in their own words, along with their background and how they like to work. The goal
 is theirs. Do not suggest one, and do not steer toward a topic a shipped map happens to cover.
 
@@ -33,6 +51,9 @@ If the goal is vague ("learn some number theory"), help them sharpen it into som
 recognize them having reached: a result, a construction, a paper they want to read.
 
 ## 3. The territory map for that goal
+
+Before launching anything, record the map path in the profile's § Goal and set the status to
+`next: step 3 (map <path>)`. Once the map is gated, set it to `next: step 4 (interview)`.
 
 Check `territories/` **silently**. If a map there serves **this** goal (not just a nearby topic),
 use it. Otherwise build one. Either way, tell the learner only in their terms: "I'll put together a
@@ -69,13 +90,16 @@ probe" section of `docs/lesson-prep-pass-design.md` first.
   pass probes deeply for its target. Stop when you can name a plausible edge.
 - Watch *how* they answer. Where they get stuck reveals a missing tool. What they reach for
   reveals what they hold. Note both.
+- **Write each finding into the profile as soon as it's settled** (grade, their words, the
+  evidence), and keep the status at `next: step 4 (interview; covered: <areas>)`. A resumed
+  session then continues with the areas not yet covered.
 
-## 5. Write the profile
+## 5. Finish the profile
 
-Copy `learners/TEMPLATE.md` to `learners/<handle>.md` and fill it: the goal and its map, grades by
-how acquired, the evidence for each, and process asks they voiced. Create
+Complete `learners/<handle>.md`: the goal and its map, grades by how acquired, the evidence for
+each, and process asks they voiced. Create
 `lessons/<handle>/stack.md`, an empty question stack headed by their goal. Tell them, in their
 terms, where you think their edge is (one or two sentences, hedged), and ask whether it matches
-their sense of it. Correct the profile if not.
+their sense of it. Correct the profile if not. Then set `Setup status: done <date>`.
 
 Finish with: "Type `/lesson` when you're ready." Do not start a lesson inside `/setup`.
