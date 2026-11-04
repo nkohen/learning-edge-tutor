@@ -5,8 +5,9 @@ syllabus and not a learner record. Which node to teach next comes from the learn
 in `learners/<name>.md`, never from the order here. This map ships with the tutor: it was drafted
 from the literature, used in the author's own teaching runs, and gated once (claim-auditor → red-team).*
 
-**Goal this map serves:** understanding SQIsign. If a learner's goal is elsewhere, build a new map
-(`/setup` does this). Do not bend this one.
+**Goal this map serves:** understanding SQIsign. For a different goal, `/setup` builds a new map.
+That map may borrow overlapping nodes from this one, but this file is not reorganized around
+another goal.
 
 **Scope** (the author's choice, 2026-07-30). The variants use materially different mathematics:
 

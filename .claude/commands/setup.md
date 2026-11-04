@@ -34,15 +34,20 @@ recognize them having reached: a result, a construction, a paper they want to re
 
 ## 3. The territory map for that goal
 
-List `territories/`. If a map there serves **this** goal (not just a nearby topic), use it and say
-so in one line. Otherwise build one. Tell the learner it takes a while, and that they can keep
-chatting about their background meanwhile.
+Check `territories/` **silently**. If a map there serves **this** goal (not just a nearby topic),
+use it. Otherwise build one. Either way, tell the learner only in their terms: "I'll put together a
+map of what leads to <their goal>. It takes a while, so tell me about your background meanwhile."
+Never mention map files, shipped maps, or why one was or wasn't used.
+
+If an existing map **overlaps** part of the goal, give its path to the researcher as source
+material. Overlapping nodes, and their audit findings, may be reused with a citation. The new map
+is still organized around this learner's goal, and the existing map is not edited.
 
 - Launch the `researcher` agent to write `territories/<slug>.md`: what there is to learn on the
   way to the goal and how each piece bears on the others. Label each dependency **formal**
   (cannot state the next thing without it) or **informal** (motivation, intuition, analogy). Keep
-  informal *concepts* too. Note where several routes exist, and give sources. Follow the shape of
-  `territories/sqisign.md`: foundations first, then branches, then what is out of scope. It must
+  informal *concepts* too. Note where several routes exist, and give sources. Shape: foundations
+  first, then the branches toward the goal, then what is deliberately out of scope. It must
   hold **no proofs or answer keys**. Those belong to lesson prep. Head it with a status line:
   "DRAFT — built for <handle>'s goal on <date>".
 - Run `claim-auditor` on it, then `red-team` on the load-bearing dependency claims. Fold the
